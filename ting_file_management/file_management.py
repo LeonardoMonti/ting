@@ -2,6 +2,7 @@ import sys
 
 def txt_importer(path_file):
     lines = []
+    
     try:
         with open(path_file, mode='r') as file:
             value = file.name.lower().split('.')[-1]
@@ -15,3 +16,4 @@ def txt_importer(path_file):
 
     except:
         print(f"Arquivo {path_file} não encontrado", file=sys.stderr)
+        return
